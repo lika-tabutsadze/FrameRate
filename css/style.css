@@ -16,6 +16,7 @@
     font-size: 1.8rem; 
     margin-bottom: 25px; 
     position: relative; 
+    font-weight: bold;
 }
 
 .section__title::after { 
@@ -237,8 +238,16 @@
         width: 92%;
     }
     
+    /* HERO SECTION - 1024PX RESPONSIVE */
+
     .hero__title {
         font-size: 2.8rem;
+    }
+
+    /* MOVIE SECTION */
+    #movies__container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
 }
 
@@ -285,6 +294,7 @@
         font-size: 1.3rem; 
     }
 
+
     /*  HERO - 480PX RESPONSIVE */
 
      .hero__title {
@@ -295,6 +305,12 @@
         font-size: 0.9rem;
     }
 
+    /* MOVIE SECTION - 480PX RESPONSIVE */
+
+     .movies__grid { 
+        grid-template-columns: 1fr; 
+    }
+    
 }
 
 @media (max-width:320px) {
@@ -302,6 +318,10 @@
 
     body {
         font-size: 14px;
+    }
+
+    .section__title {
+        font-size: 1.4rem;
     }
 
     /* HERO SECTION - 32OPX RESPONSIVE */
