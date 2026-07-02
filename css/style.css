@@ -454,6 +454,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 450px;
+    min-height: 443px;
+    position: relative;
 }
 
 .news__card:hover {
@@ -464,6 +467,7 @@
 .news__img__container {
     position: relative;
     height: 200px;
+    max-width: 450px;
     overflow: hidden;
 }
 
@@ -502,25 +506,27 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
 }
 
 .news__title {
-    font-size: 1.25rem;
-    line-height: 1.4;
+    font-size: 1.15rem;
+    line-height: 1.5;
     color: #ffffff;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+   
 }
 
 .news__text {
     color: #aaaaaa;
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .news__read-more {
-    margin: 0px auto 20px;
     color: #e50914;
     text-decoration: none;
     font-size: 0.9rem;
@@ -529,9 +535,11 @@
     align-items: center;
     gap: 8px;
     transition: 0.2s ease;
-    border: 1px solid #e50914;
-    padding: 8px 10px;
+    padding: 4px 5px;
     border-radius: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
 }
 
 .news__read-more:hover {
@@ -540,13 +548,7 @@
     background-color: #e50914;
 }
 
-.news__content__container {
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
+
 
 
 /*========= RESPONSIVE ===== */
@@ -659,6 +661,18 @@
     .status__badge {
         margin: auto;
     }
+
+    /* NEWS SECTION - 768PX RESPONSIVE */
+
+    .news__title {
+        font-size: 0.9rem;
+    }
+    .news__text {
+        font-size: 0.8rem;
+    }
+    .news__read-more {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width:480px) {
@@ -696,6 +710,14 @@
         grid-template-columns: repeat(1,300px);
         justify-content: center;
     }
+
+    /* NEWS SECTION - 480PX RESPONSIVE */
+    .news__grid {
+        justify-content: center;
+        grid-template-columns: 350px;
+
+    }
+
     
 }
 
@@ -735,5 +757,32 @@
 
     .status__badge {
         font-size:0.7rem;
+    }
+
+    /* NEWS SECTION - 32OPX RESPONSIVE */
+    .news__grid {
+        grid-template-columns: 250px;
+    }
+    .news__card {
+        max-width: 250px;
+    }
+
+    .news_title {
+        font-size: 0.6rem;
+    }
+
+    .news__text {
+        font-size: 0.7rem;
+    }
+    .news__read-more {
+        font-size: 0.7rem;
+    }
+
+    .news__date {
+        font-size: 0.6rem;
+    }
+    .news__category {
+        font-size: 0.4rem;
+        padding: 4px;
     }
 }
