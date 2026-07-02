@@ -36,7 +36,7 @@ async function fetchMoviesFromAPI() {
         const movies = data.results.slice(0, 4);
 
         movies.forEach(movie => {
-            const card = document.createElement('article');
+            const card = document.createElement('section');
             card.classList.add('movie__card');
             
             card.innerHTML = `
