@@ -52,4 +52,6 @@ box-sizing: border-box;
 
 body {
     font-family: 'Poppins';
+	background-color: #141414; 
+	color: #ffffff; 
 }

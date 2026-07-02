@@ -13,28 +13,27 @@
     <title>FrameRate - ფილმები</title>
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <div class="header__logo">
-          <a class="logo__icon" href="./index.html"
-            ><i class="fas fa-film"></i
-          ></a>
-          <a class="logo__title" href="./index.html">Frame<span>Rate</span></a>
+
+    <header class="main__header">
+        <div class="header__container">
+            <a href="#" class="logo"><i class="fas fa-film"></i> Frame<span>Rate</span></a>
+            <nav class="navbar" id="navbar">
+                <ul class="nav__list">
+                    <li><a class="nav__link nav__link--active" href="#hero">მთავარი</a></li>
+                    <li><a class="nav__link" href="#trending">ფილმები</a></li>
+                    <li><a class="nav__link" href="#newsletter">სიახლეები</a></li>
+                    <li><a class="nav__link" href="#about">ჩვენ შესახებ</a></li>
+                    <li><a class="nav__link" href="#contact">კონტაქტი</a></li>
+                </ul>
+            </nav>
+            <button class="burger__menu" id="burger--toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <div class="header__navigation">
-          <nav>
-            <ul>
-              <li><a class="nav__link" href="#">მთავარი</a></li>
-              <li><a class="nav__link" href="#">ფილმები</a></li>
-              <li><a class="nav__link" href="#">სიახლეები</a></li>
-              <li><a class="nav__link" href="#">ჩვენ შესახებ</a></li>
-            </ul>
-          </nav>
-          <div class="burger-menu" id="burger-toggle">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </div>
-      </div>
     </header>
+
+
+
+    <script src="./app.js"></script>
   </body>
 </html>
