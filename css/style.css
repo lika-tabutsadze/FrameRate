@@ -10,7 +10,9 @@
 
 
 /* GENERAL STYLES FOR SECTIONS */
-
+.movies__section, .genres__section { 
+    padding: 30px 30px; 
+}
 
 .section__title { 
     font-size: 1.8rem; 
@@ -181,9 +183,7 @@
 }
 
 /* ====== STYLING THE MOVIES SECTION ====== */
-.movies__section { 
-    padding: 60px 0; 
-}
+
 
 
 .movies__grid { 
@@ -229,6 +229,50 @@
     color: #ffbc00; 
     font-size: 0.9rem; 
 }
+
+
+/* =============== STYLING THE GENRE SECTION ============= */
+
+.genres__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.genre__card {
+    background: #1f1f1f;
+    border: 1px solid #2c2c2c;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.genre__card:hover {
+    border-color: #e50914;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.1);
+}
+
+.genre__icon {
+    font-size: 2.5rem;
+    color: #e50914;
+    margin-bottom: 15px;
+}
+
+.genre__title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.movie__count {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+}
+
 
 
 /*========= RESPONSIVE ===== */
@@ -293,7 +337,14 @@
     .logo {
         font-size: 1.3rem; 
     }
-
+    .section__title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .section__title::after {
+        width: 100%;
+        bottom: -15px;
+    }
 
     /*  HERO - 480PX RESPONSIVE */
 
@@ -307,8 +358,15 @@
 
     /* MOVIE SECTION - 480PX RESPONSIVE */
 
-     .movies__grid { 
+     .movies__grid {
         grid-template-columns: 1fr; 
+    }
+
+    /* GENRE SECTION - 480PX RESPONSIVE */
+    
+    .genres__grid {
+        grid-template-columns: repeat(1,300px);
+        justify-content: center;
     }
     
 }
@@ -330,4 +388,8 @@
         font-size: 1.5rem;
     }
 
+    /* GENRE SECTION - 320PX RESPONSIVE */
+    .genres__grid {
+        grid-template-columns: repeat(1,250px);
+    }
 }
