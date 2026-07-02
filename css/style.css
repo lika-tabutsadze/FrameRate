@@ -8,6 +8,32 @@
     margin: 0 auto; 
 }
 
+
+/* GENERAL STYLES FOR SECTIONS */
+
+
+.section__title { 
+    font-size: 1.8rem; 
+    margin-bottom: 25px; 
+    position: relative; 
+}
+
+.section__title::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: -8px; 
+    left: 0; 
+    width: 40px; 
+    height: 3px; 
+    background: #e50914; 
+}
+
+.section__text {
+    color: #aaaaaa;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
 /* STYLING THE HEADER */
 
 .main__header { 
@@ -153,7 +179,55 @@
     background-color: white;
 }
 
+/* ====== STYLING THE MOVIES SECTION ====== */
+.movies__section { 
+    padding: 60px 0; 
+}
 
+
+.movies__grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px; 
+}
+
+.movie__card { 
+    background: #1f1f1f; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    transition: 0.3s; 
+}
+
+.movie__card:hover { 
+    transform: translateY(-5px); 
+}
+
+.movie__img__box { 
+    height: 320px; 
+}
+
+.movie__img__box img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.movie__info { 
+    padding: 15px; 
+}
+
+.movie__info h3 { 
+    font-size: 1.1rem; 
+    margin-bottom: 5px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.movie__rating { 
+    color: #ffbc00; 
+    font-size: 0.9rem; 
+}
 
 
 /*========= RESPONSIVE ===== */
