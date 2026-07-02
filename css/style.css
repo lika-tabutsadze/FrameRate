@@ -10,7 +10,7 @@
 
 
 /* GENERAL STYLES FOR SECTIONS */
-.movies__section, .genres__section, .director__section, .upcoming__section, .news__section, .about__section { 
+.movies__section, .genres__section, .director__section, .upcoming__section, .news__section, .about__section, .newsletter__section { 
     padding: 30px 30px; 
     margin: auto;
 }
@@ -687,6 +687,29 @@
 }
 
 
+/* STYLING THE NEWSLETTER SECTION */
+
+.newsletter__form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.newsletter__input {
+    padding: 12px 100px 12px 12px;
+    background: #2c2c2c;
+    border: 1px solid #3c3c3c;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+}
+
+.newsletter__container {
+    margin: auto;
+}
+
+
 /*========= RESPONSIVE ===== */
 
 @media (max-width:1024px){
@@ -936,6 +959,21 @@
         font-size: 0.9rem;
         color: #dddddd;
     }
+
+    /* NEWSLETTER SECTION - 480PX RESPONSIVE */
+    .newsletter__form {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .newsletter__input, 
+    .newsletter__form .btn--primary {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+
 }
 
 @media (max-width:320px) {
