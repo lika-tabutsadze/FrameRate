@@ -275,6 +275,8 @@
 }
 
 
+
+
 /* =============== STYLING THE DIRECTOR OF THE MONTH SECTION ============= */
 
 .director__section {
@@ -350,6 +352,89 @@
     background: #e50914;
     cursor: default;
 }
+
+/*============ STYLING THE UPCOMING MOVIES SECTION =====*/
+
+.upcoming__movies {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upcoming__movie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.upcoming__left__container {
+    display: flex;
+    align-items: center;
+}
+
+.upcoming__movie:hover {
+    border-left: 4px solid #e50914;
+    background: #252525;
+    transform: translateX(5px);
+}
+
+.upcoming__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #2c2c2c;
+    padding: 10px;
+    width: 60px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.day {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e50914;
+}
+
+.month {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #aaaaaa;
+}
+
+.upcoming__details {
+    padding: 0 25px;
+}
+
+.upcoming__movie__title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.upcoming__movie__details {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+.status__badge {
+    background: #2c2c2c;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.status__badge--animated {
+    background: rgba(229, 9, 20, 0.2);
+    color: #e50914;
+    border: 1px solid #e50914;
+}
+
 
 /*========= RESPONSIVE ===== */
 
@@ -430,6 +515,37 @@
     .director__movies {
         justify-content: center;
     }
+    /* UPCOMING MOVIES - 768PX RESPONSIVE */
+    .upcoming__movie {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .upcoming__details {
+        padding: 5px;
+    }
+
+    .upcoming__left__container {
+       flex-direction: column;
+       gap: 10px;
+       margin: auto;
+    }
+    .upcoming__movie__title {
+        font-size: 1rem;
+    }
+
+    .upcoming__movie__details {
+        font-size: 0.6rem;
+    }
+    .day {
+        font-size: 1.1rem;
+    }
+    .upcoming__date {
+        max-width: 40px;
+    }
+    .status__badge {
+        margin: auto;
+    }
 }
 
 @media (max-width:480px) {
@@ -471,6 +587,10 @@
 }
 
 @media (max-width:320px) {
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
     /* GENERAL FONT SIZE */
 
     body {
@@ -490,5 +610,17 @@
     /* GENRE SECTION - 320PX RESPONSIVE */
     .genres__grid {
         grid-template-columns: repeat(1,250px);
+    }
+
+    /* UPCOMING MOVIES - 320PX RESPONSIVE */
+    .upcoming__movie__title {
+        font-size: 0.8rem;
+    }
+    .upcoming__movie__details {
+        font-size: 0.5rem;
+    }
+
+    .status__badge {
+        font-size:0.7rem;
     }
 }
