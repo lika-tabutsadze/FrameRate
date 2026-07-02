@@ -10,7 +10,7 @@
 
 
 /* GENERAL STYLES FOR SECTIONS */
-.movies__section, .genres__section, .director__section, .upcoming__section, .news__section { 
+.movies__section, .genres__section, .director__section, .upcoming__section, .news__section, .about__section { 
     padding: 30px 30px; 
     margin: auto;
 }
@@ -645,6 +645,48 @@
     color: #e50914;
 }
 
+
+/* ======== STYLING THE ABOUT US SECTION ========= */
+
+
+.about__section {
+    margin: auto;
+    transition: 0.3s;
+}
+.about__container {
+    display: flex;
+    align-items: center;
+    background-image: url("../images/about_us.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.aboutUs__title {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.4;
+    font-weight: bolder;
+    
+}
+
+.aboutUs__text {
+    color: #aaaaaa;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.about__section:hover {
+    transform: scale(1.04);
+
+}
+
+
 /*========= RESPONSIVE ===== */
 
 @media (max-width:1024px){
@@ -799,6 +841,16 @@
     .blog__image {
         width: 100%;
     }
+
+    /* ABOUT US - 768PX RESPONSIVE */
+    .aboutUs__title {
+        font-size: 1.5rem;
+        
+    }
+    .aboutUs__text {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
 }
 
 @media (max-width:480px) {
@@ -874,6 +926,15 @@
 
     .return__btn {
         font-size: 0.8rem;
+    }
+
+    /* ABOUT US - 480PX RESPONSIVE */
+    .aboutUs__title {
+        font-size: 1.2rem;
+    }
+    .aboutUs__text {
+        font-size: 0.9rem;
+        color: #dddddd;
     }
 }
 
@@ -966,5 +1027,19 @@
     }
     .blog__logo {
         font-size: 1rem;
+    }
+
+    /* ABOUT US - 32OPX RESPONSIVE */
+    .about__container {
+        text-align: center;
+    }
+    .aboutUs__title {
+        font-size: 1rem;
+    }
+    .aboutUs__text {
+        font-size: 0.7rem;
+    }
+    .about__container .spotlight__badge {
+        font-size: 0.6rem;
     }
 }
