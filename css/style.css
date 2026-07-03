@@ -16,10 +16,12 @@
 }
 
 .section__title { 
+    display: inline-block;
     font-size: 1.8rem; 
     margin-bottom: 25px; 
     position: relative; 
     font-weight: bold;
+  
 }
 
 .section__title::after { 
@@ -30,6 +32,11 @@
     width: 40px; 
     height: 3px; 
     background: #e50914; 
+    transition: 0.3s;
+}
+
+.section__title:hover::after {
+    width: 100%;
 }
 
 .section__text {
@@ -726,6 +733,92 @@
 .footer__copyright {
     margin-top: 10px; 
     color: #aaaaaa;
+}
+
+
+/* ============== STYLING THE COOKIE BANNER  ==================== */
+.cookie__banner {
+    display: flex;
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    border-top: 2px solid #e50914;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.5);
+    z-index: 2000; 
+    padding: 15px 0;
+}
+
+
+
+.cookie__container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie__container p {
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.fa-cookie-bite {
+    color: #e50914; 
+    margin-right: 8px;
+}
+.cookie__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cookie__btn {
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-wrap: nowrap;
+    transition: 0.2s ease;
+}
+.accept__cookies__btn {
+    background-color: green;
+}
+.decline__cookies__btn {
+    background-color: red;
+}
+.cookie__btn:hover {
+    transform: scale(1.03);
+}
+ /* STYLING SCROLL TO TOP BUTTON */
+
+
+.scroll__btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1500;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    display: none;
 }
 
 

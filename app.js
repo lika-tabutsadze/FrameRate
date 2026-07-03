@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    BurgerMenu();
-    fetchMoviesFromAPI()
-});
 
 // ============= BURGER ფუნქციონალი ========== 
 
@@ -15,7 +11,7 @@ function BurgerMenu() {
         });
     }
 }
-
+BurgerMenu()
 
 // ==== FETCH ===== MOVIEDB API-დან ინფორმაციის წამოღება
 const API_KEY = 'cad9d3e7aa609a79c1c2aae538f3fd5e'; 
@@ -23,7 +19,7 @@ const TMDB_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&
 const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 
 
-async function fetchMoviesFromAPI() {
+async function fetchMovies() {
     const container = document.getElementById('movies__container');
     if (!container) return;
 
@@ -57,3 +53,53 @@ async function fetchMoviesFromAPI() {
         console.error("შეცდომა:", error);
     }
 }
+
+fetchMovies()
+
+// ================ SCROLL TO TOP ============
+
+
+const scrollTopBtn = document.getElementById("scroll__btn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+
+
+// ============= COOKIE POLICY ============
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cookieBanner = document.getElementById("cookie__banner");
+    const acceptBtn = document.getElementById("accept");
+    const declineBtn = document.getElementById("decline");
+
+
+    if (localStorage.getItem("cookieDecision")) {
+        cookieBanner.style.display = "none"; 
+    }
+
+ 
+    acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieDecision", "accepted"); 
+        cookieBanner.style.display = "none"; 
+    });
+
+   
+    declineBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieDecision", "declined"); 
+        cookieBanner.style.display = "none"; 
+    });
+});
+
