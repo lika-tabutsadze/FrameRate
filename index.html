@@ -21,11 +21,12 @@
             <a href="./index.html" class="logo"><i class="fas fa-film"></i> Frame<span>Rate</span></a>
             <nav class="navbar" id="navbar">
                 <ul class="nav__list">
-                    <li><a class="nav__link nav__link--active" href="#">მთავარი</a></li>
-                    <li><a class="nav__link" href="#">ფილმები</a></li>
-                    <li><a class="nav__link" href="#">სიახლეები</a></li>
-                    <li><a class="nav__link" href="#">ჩვენ შესახებ</a></li>
-                    <li><a class="nav__link" href="#">კონტაქტი</a></li>
+                    <li><a class="nav__link nav__link--active" href="./index.html">მთავარი</a></li>
+                    <li><a class="nav__link" href="#movies__section">ფილმები</a></li>
+                    <li><a class="nav__link" href="#news__section">სიახლეები</a></li>
+                    <li><a class="nav__link" href="#upcoming__section">პრემიერები</a></li>
+                    <li><a class="nav__link" href="#about__section">ჩვენ შესახებ</a></li>
+                    
                 </ul>
             </nav>
             <button class="burger__menu" id="burger--toggle">
@@ -49,7 +50,7 @@
 
         <!-- ======== MOVIE SECTION ====== -->
 
-        <section id="trending" class="movies__section">
+        <section id="movies__section" class="movies__section">
             <div class="container">
                 <h2 class="section__title">ამჟამად პოპულარული</h2>
                 <div class="movies__grid" id="movies__container">
@@ -114,7 +115,7 @@
 
       <!-- === UPCOMING MOVIES SECTION === -->
 
-      <section class="upcoming__section">
+      <section id="upcoming__section" class="upcoming__section">
         <div class="container">
           <h2 class="section__title">ყველაზე მოსალოდნელი პრემიერები</h2>
           <div class="upcoming__movies">
@@ -177,7 +178,7 @@
 
       <!-- =======NEWS SECTION ============= -->
 
-      <section class="news__section">
+      <section id="news__section" class="news__section">
             <div class="container">
             <h2 class="section__title">კინოსამყაროს სიახლეები</h2>
             <div class="news__grid">
@@ -227,7 +228,7 @@
         </section>
       <!-- ====== ABOOUT US SECTION ====== -->
      
-       <section class="about__section">
+       <section id="about__section" class="about__section">
           <div class="container about__container">
     
               <div class="about__text__box">
@@ -257,7 +258,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer id="contact__footer" class="footer">
         <div class="container footer__container">
             <span>კონტაქტი: <a class="contact__link" href="mailto:info@cinerate.ge">info@cinerate.ge</a> | <a class="contact__link" href="tel:+995 322 00 00 00">+995 322 00 00 00</a></span>
             <p class="footer__copyright">&copy; 2026 FrameRate.</p>

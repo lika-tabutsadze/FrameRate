@@ -21,16 +21,17 @@
     margin-bottom: 25px; 
     position: relative; 
     font-weight: bold;
-  
+
+    cursor: default;
 }
 
 .section__title::after { 
     content: ''; 
     position: absolute; 
-    bottom: -8px; 
+    bottom: -12px; 
     left: 0; 
     width: 40px; 
-    height: 3px; 
+    height: 5px; 
     background: #e50914; 
     transition: 0.3s;
 }
@@ -71,12 +72,17 @@
 
 }
 
-.logo span, .fa-film:hover  { 
+.logo span  { 
     color: #e50914; 
 }
 
 .fa-film {
-    transition: 0.3s;
+    transition:0.7s;
+}
+
+.fa-film:hover {
+    color: #e50914; 
+    transform: rotate(360deg);
 }
 
 .nav__list { 
@@ -228,9 +234,9 @@
 .movie__info h3 { 
     font-size: 1.1rem; 
     margin-bottom: 5px; 
-    white-space: nowrap; 
+    text-wrap: nowrap;
     overflow: hidden; 
-    text-overflow: ellipsis; 
+    
 }
 
 .movie__rating { 
@@ -376,7 +382,7 @@
     padding: 20px;
     border-radius: 8px;
     border-left: 4px solid transparent;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .upcoming__left__container {
@@ -1065,7 +1071,7 @@
 
     /* ABOUT US - 480PX RESPONSIVE */
     .aboutUs__title {
-        font-size: 1.2rem;
+        font-size: 1.2rem;     
     }
     .aboutUs__text {
         font-size: 0.9rem;
@@ -1083,6 +1089,7 @@
     .newsletter__form .btn--primary {
         width: 100%;
         border-radius: 4px;
+        font-size: 0.8rem;
     }
 
 
